@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        insert-followed-channels-search-box
 // @description Add a search box filtering followed channels.
-// @version     0.1.0
+// @version     0.2.0
 // @namespace   https://github.com/ae9is
 // @author      ae9is
 // @license     MIT

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        insert-xray-toggle
 // @description Insert a show/hide toggle for Prime Video's X-Ray, next to the other video player overlay options buttons.
-// @version     0.0.0
+// @version     0.1.0
 // @namespace   https://github.com/ae9is
 // @author      ae9is
 // @license     MIT

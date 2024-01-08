@@ -15,9 +15,9 @@
 // Note: Instead of @run-at document-idle, could also use the waitForKeyELements() described here:
 // https://stackoverflow.com/questions/12897446
 
-(function() {
+;(function () {
   console.log('loading: show-more-followed-channels')
-  window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
     clickSideBarExpandButton()
     setTimeout(() => {
       clickShowMoreButton(0)

@@ -12,10 +12,10 @@
 // @run-at      document-idle
 // ==/UserScript==
 
-(function() {
+;(function () {
   console.log('loading: insert-followed-channels-search-box')
   window.addEventListener('load', insertSearchInput)
-})();
+})()
 
 function insertSearchInput() {
   var sideNavSection = document.querySelector('.side-nav-section')
@@ -41,7 +41,7 @@ function insertSearchInput() {
 }
 
 function setAttributes(el, attrs) {
-  Object.keys(attrs).forEach(key => el.setAttribute(key, attrs[key]))
+  Object.keys(attrs).forEach((key) => el.setAttribute(key, attrs[key]))
 }
 
 function handleSearch(event) {

@@ -1,11 +1,14 @@
 // ==UserScript==
 // @name        show-more-followed-channels
-// @namespace   Violentmonkey Scripts
+// @description Autoclick "show more" to display more followed channels.
+// @version     0.1.0
+// @namespace   https://github.com/ae9is
+// @author      ae9is
+// @license     MIT
 // @match       https://www.twitch.tv/*
 // @grant       none
-// @version     0.1
-// @author      ae9is
-// @description Autoclick "show more" to display more followed channels.
+// @updateURL   https://github.com/ae9is/monkeyscripts/raw/main/twitch/show-more-followed-channels.user.js
+// @downloadURL https://github.com/ae9is/monkeyscripts/raw/main/twitch/show-more-followed-channels.user.js
 // @run-at      document-idle
 // ==/UserScript==
 

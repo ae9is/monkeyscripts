@@ -1,11 +1,15 @@
 // ==UserScript==
 // @name        insert-followed-channels-search-box
-// @namespace   Violentmonkey Scripts
+// @description Add a search box filtering followed channels.
+// @version     0.1.0
+// @namespace   https://github.com/ae9is
+// @author      ae9is
+// @license     MIT
 // @match       https://www.twitch.tv/*
 // @grant       none
-// @version     0.1
-// @author      ae9is
-// @description Add a search box filtering followed channels.
+// @updateURL   https://github.com/ae9is/monkeyscripts/raw/main/twitch/insert-followed-channels-search-box.user.js
+// @downloadURL https://github.com/ae9is/monkeyscripts/raw/main/twitch/insert-followed-channels-search-box.user.js
+// @run-at      document-idle
 // ==/UserScript==
 
 (function() {

@@ -20,13 +20,10 @@
   //window.addEventListener('load', insertXrayToggle)
   insertXrayToggle()
   setInterval(insertXrayToggle, 500)
-  // Start hidden
-  hideXray()
 })()
 
 function addStyles() {
   addToggleSwitchStyles()
-  //addArrowStyles()
 }
 
 function insertXrayToggle() {
@@ -58,7 +55,8 @@ function createToggle(toggleState) {
     class: 'xray-toggle-input',
   })
   input.checked = toggleState
-  input.onclick = toggleXray
+  input.onclick = handleClick
+  setToggleState(input.checked)
   const label = document.createElement('label')
   setAttributes(label, {
     class: 'xray-toggle-label',
@@ -86,12 +84,16 @@ function setAttributes(el, attrs) {
 const openArrowClass = 'xrayVodArrow xrayVodArrowRight'
 const closedArrowClass = 'xrayVodArrow xrayVodArrowLeft'
 
-function toggleXray(event) {
+function handleClick(event) {
   const checkbox = event.target
   const checked = checkbox.checked
+  setToggleState(checked)
+}
+
+function setToggleState(visible) {
   const xray = getXray()
   if (xray) {
-    if (checked) {
+    if (visible) {
       xray.style.setProperty('display', '')
     } else {
       xray.style.setProperty('display', 'none')

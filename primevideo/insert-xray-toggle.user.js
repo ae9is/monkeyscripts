@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        insert-xray-toggle
 // @description Insert a show/hide toggle for Prime Video's X-Ray, next to the other video player overlay options buttons.
-// @version     0.1.0
+// @version     0.2.0
 // @namespace   https://github.com/ae9is
 // @author      ae9is
 // @license     MIT
@@ -99,52 +99,76 @@ function addToggleSwitchStyles() {
   width: 0;
   visibility: hidden;
 }
-.xray-toggle-label {
-  cursor: pointer;
-  text-indent: -9999rem;
-  width: 3rem;
-  height: 1.75rem;
-  background: #8197a4;
-  display: block;
-  border-radius: 1.75rem;
-  position: relative;
-}
-.xray-toggle-label:after {
-  content: '';
-  position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  width: 1.25rem;
-  height: 1.25rem;
-  background: #fff;
-  border-radius: 1.25rem;
-  transition: 0.3s;
-}
-.xray-toggle-input:checked + .xray-toggle-label {
-  background: #00a0d6;
-}
-.xray-toggle-input:checked + .xray-toggle-label:after {
-  left: calc(100% - 0.25rem);
-  transform: translateX(-100%);
-  background: #fff;
-}
-.xray-toggle-label:active:after {
-  width: 1.8rem;
-}
-.xray-toggle-span {
-  font-size: 1.3vw;
-  font-weight: normal;
-  color: #999;
-  padding-right: 0.75rem;
-}
-.xray-toggle-input:checked ~ .xray-toggle-span {
-  color: #fff;
-}
+/* Toggle switch container */
 #xray-toggle {
   margin-right: 1.5vw;
   display: flex;
   flex-direction: row-reverse;
   align-items: end;
+}
+/* Toggle switch label */
+.xray-toggle-span {
+  font-size: 1.4166666666666665vw;
+  font-weight: normal;
+  color: #999;
+  padding-right: 0.75vw;
+}
+.xray-toggle-input:checked ~ .xray-toggle-span {
+  color: #fff;
+}
+/* Toggle switch border */
+.xray-toggle-label {
+  cursor: pointer;
+  text-indent: -9999vw;
+  width: 2.25vw;
+  height: 1.2vw;
+  border: solid 0.2vw #999;
+  display: block;
+  border-radius: 1.2vw;
+  position: relative;
+}
+.xray-toggle-label:hover {
+  border-color: #fff;
+}
+/* Dot indicator */
+.xray-toggle-label:hover::after {
+  background: #fff;
+}
+.xray-toggle-label::after {
+  content: '';
+  position: absolute;
+  top: 0.2vw;
+  left: 0.25vw;
+  width: 0.8vw;
+  height: 0.8vw;
+  background: #999;
+  border-radius: 0.8vw;
+  /* Affects hover highlighting as well, but not unpleasant */
+  transition: 0.2s;
+}
+.xray-toggle-input:checked + .xray-toggle-label::after {
+  left: calc(100% - 0.275vw);
+  transform: translateX(-100%);
+}
+.xray-toggle-label:active::after {
+  width: 1.2vw;
+}
+/* Line indicator */
+.xray-toggle-label::before {
+  content: '';
+  position: absolute;
+  top: 0.45vw;
+  left: 0.35vw;
+  width: 1.55vw;
+  height: 0.2vw;
+  border-radius: 0.2vw;
+  transition: 0.2s;
+}
+.xray-toggle-input:checked + .xray-toggle-label::before {
+  background: #999;
+}
+.xray-toggle-input:checked + .xray-toggle-label:hover::before {
+  background: #fff;
 }
 `
   document.head.appendChild(styles)

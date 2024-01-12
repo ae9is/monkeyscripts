@@ -21,10 +21,6 @@
   setInterval(insertXrayToggle, 500)
 })()
 
-function addStyles() {
-  addToggleSwitchStyles()
-}
-
 function insertXrayToggle() {
   const DEFAULT_XRAY_TOGGLE_STATE = false
   const optionsWrapper = document.querySelector('.atvwebplayersdk-options-wrapper')
@@ -90,8 +86,7 @@ function getXray() {
   return document.querySelector('.xrayQuickView')
 }
 
-function addToggleSwitchStyles() {
-  // Palette based on email list toggle switch colours, under account options
+function addStyles() {
   const styles = document.createElement('style')
   styles.innerHTML = `
 .xray-toggle-input {
